@@ -1,0 +1,56 @@
+.filter__details-grid {
+	display: inline-grid;
+    grid-template-columns: auto 1fr;
+    position: fixed;
+    top: 0;
+    left: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+}
+
+.filter {
+	padding: 20px;
+	padding-bottom: 10px;
+  
+    background-color: #4c828d;
+    color:#16282a;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 5px 5px  10px rgba(0,0,0,0.6)
+
+}
+
+.filter__add-recipe-btn-container {
+    padding-top: 25px;
+    background-color: #b78b31;
+    border-radius: 20px;
+    margin-left: 12px;
+    box-shadow: 5px 5px  10px rgba(0,0,0,0.6)
+
+}
+.filter__add-recipe-btn-container button {
+    border: none;
+}
+.filter__label {
+    font-size: 1.75rem;
+    font-weight: bold;
+
+}
+.filter__input {
+    border: 1px solid black;
+	border-radius: 5px;
+	font-size: inherit;
+    padding: 5px 10px;
+    margin-top: 5px;
+	outline: none;
+	width: 91%;
+    background-color: #cddadd;
+
+}
+.filter__clear-search-btn-container {
+    padding-top: 10px;
+	padding-bottom: 5px;
+    text-align: left;
+    padding-right: 33px
+}
