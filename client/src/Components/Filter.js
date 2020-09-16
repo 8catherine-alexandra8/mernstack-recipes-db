@@ -3,7 +3,7 @@ import { RecipeContext } from './App';
 
 
 export default function Filter({
-    value,
+    searchTerm,
 	handleSearchInput,
 	handleSearchClear
 }) {
@@ -18,7 +18,8 @@ export default function Filter({
 				<input
 					className="filter__input"
 					type="text"
-					value={value}
+                    name="search"
+					value={searchTerm}
 					onChange={handleSearchInput}
 					placeholder="includes ingredient"
 				/>
