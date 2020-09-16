@@ -117,7 +117,7 @@ export default function App() {
 
     return (
         <RecipeContext.Provider value={recipeContextValue}>
-            {selectedRecipe ? (
+             {selectedRecipe ? (
                 <RecipeEdit recipe={selectedRecipe} />
             ) : (
             <>
@@ -128,6 +128,7 @@ export default function App() {
                 handleRecipeAdd={handleRecipeAdd}
                
             />
+           
                 <RecipeList
                 recipes={searchTerm.length < 1 ? recipes : filteredListDisplay}
                 />

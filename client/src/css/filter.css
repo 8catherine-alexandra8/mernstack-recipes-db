@@ -54,3 +54,21 @@
     text-align: left;
     padding-right: 33px
 }
+@media (max-width: 1000px) {
+	.filter__details-grid
+	{
+        grid-template-columns: 1fr;
+        left:0px
+    }
+    .filter__add-recipe-btn-container {
+        margin-left: 0px;
+        margin-top: 5px;
+        text-align: center;
+    }
+    .filter__add-recipe-btn-container button {
+        margin-top: -50px;
+        margin-bottom: 15px;
+}
+
+
+}

@@ -1,24 +1,23 @@
 .recipe-edit {
-	padding: 30px;
-	padding-top: 5px;
+    padding: 30px;
+    padding-top: 5px;
     top: 0;
     max-width: 75%;
     margin-left: auto;
     margin-right: auto;
-	max-height: 100%;
+    max-height: 100%;
     overflow-y: auto;
     background-color: #0e3c45;
     color:  #fffbf1;
-
 }
 .recipe-edit__remove-button-container {
     text-align: end;
 }
-.btn recipe-edit__remove-button {
-	padding: 0;
-	background: none;
-	outline: none;
-	border: none;
+.recipe-edit__remove-button { 
+	padding: 0px;
+	color: #943a2c;;
+	background-color: #cddadd;
+    font-size: 1rem;
 }
 .recipe-edit__details-grid {
 	display: grid;
@@ -41,7 +40,7 @@
 }
 textarea.recipe-edit__input {
 	resize: none;
-    height: 200px;
+    height: 150px;
     background-color: #cddadd;
 
 }
