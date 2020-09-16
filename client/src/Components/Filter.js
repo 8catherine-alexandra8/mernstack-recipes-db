@@ -21,7 +21,7 @@ export default function Filter({
                     name="search"
 					value={searchTerm}
 					onChange={handleSearchInput}
-					placeholder="includes ingredient"
+					placeholder="by ingredient"
 				/>
 				<div className="filter__clear-search-btn-container">
 					<button
@@ -32,7 +32,7 @@ export default function Filter({
 					</button>
 				</div>
 			</div>
-			<div className="filter__add-recipe-btn-container">
+			<div className="filter__add-recipe-btn-container" onClick={handleRecipeAdd}>
 				<button
                     onClick={handleRecipeAdd}
 					className="btn btn--attention"
