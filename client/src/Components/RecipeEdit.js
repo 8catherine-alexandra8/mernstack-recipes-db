@@ -32,14 +32,6 @@ export default function RecipeEdit({ recipe }) {
     function handleRecipeSubmit(event) {
         event.preventDefault();
         
-        axios.get('/api/'+recipe.id)
-            .then(response => {
-                console.log(response)
-            })
-            .catch((err) => {
-                console.log(err)
-            })
-        
         axios.post('/api/save', recipe)
         .then(res => console.log(res.data));
 
