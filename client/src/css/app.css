@@ -16,13 +16,21 @@
 
 html {
 	font-size: 25px;
+	height: 100%;
+	overflow-x: hidden;
 }
 body {
+	height: 100%;
 	padding: 0;
     margin: 0;
-    background-color: #0e3c45
-
+    background-color: #0e3c45;
+	overflow-x: hidden;
 }
 .mr-1 {
 	margin-right: 5px;
+}
+.content {
+	width: 100%;
+	position: relative;
+	overflow-x: hidden;
 }

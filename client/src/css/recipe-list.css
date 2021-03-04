@@ -1,19 +1,39 @@
 .recipe-list {
-	margin-top: 200px;
+	margin-top: 300px;
 	min-height: 100vh;
-	width: 65%;
-	margin-left: auto;
-	margin-right: auto;
-
-	
+	margin-left: 10px;
+	margin-right: 10px;
 }
+
 .recipe-list__add-recipe-btn-container {
-	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-bottom: 30px; 
 	text-align: center;
 }
-@media (max-width: 1000px) {
+
+@media (min-width: 360px) {
 	.recipe-list {
-		margin-top: 280px;
+	margin-top: 280px;
 	}
 }
+
+@media (min-width: 540px) {
+	.recipe-list {
+	margin-top: 300px;
+	}
+}
+
+@media (min-width: 768px) {
+	.recipe-list {
+	margin-top: 320px;
+	width: 618px;
+	margin-left: auto;
+	margin-right: auto;
+	}
+}
+
+@media (min-width: 1500px) {
+	.recipe-list {
+	max-width: 965px;
+	}
+}
+

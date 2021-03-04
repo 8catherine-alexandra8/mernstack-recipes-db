@@ -34,7 +34,6 @@ export default function App() {
 
     function handleRecipeSelect(id) {
         setSelectedRecipeId(id)
-        removeBlankRecipes();
     }
 
     function handleRecipeAdd() {
@@ -103,30 +102,22 @@ export default function App() {
         };
     };
     function handleSearchClear() {
-        let searchedTerm = searchTerm
-        searchedTerm = '';
-        setSearchTerm(searchedTerm)
+        setSearchTerm('')
     };
-
-    function removeBlankRecipes() {
-        const allRecipes = [...recipes]
-        const noBlankRecipes = allRecipes.filter(recipe => recipe.name.length > 1)
-        setRecipes(noBlankRecipes)
-    }
-
 
     return (
         <RecipeContext.Provider value={recipeContextValue}>
+            <div className='content'>
              {selectedRecipe ? (
                 <RecipeEdit recipe={selectedRecipe} />
             ) : (
             <>
             <Filter
-                value={searchTerm}
+                searchTerm={searchTerm}
                 handleSearchInput={(event) => handleSearchInput(event.target.value)}
                 handleSearchClear={handleSearchClear}
                 handleRecipeAdd={handleRecipeAdd}
-               
+               recipes={recipes}
             />
            
                 <RecipeList
@@ -134,6 +125,7 @@ export default function App() {
                 />
             </>
             )}
+            </div>
         </RecipeContext.Provider>
     );
 

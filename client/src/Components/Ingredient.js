@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 
 export default function Ingredient({ name, amount }) {
-    return (
-        <>
-            <span>{name}</span>
-            <span>{amount}</span>
-        </>
-    )
+	return (
+		<div className='ingredient'>
+			<span className='name'>{name}</span>
+			<span className='amount'>{amount}</span>
+		</div>
+	)
 }

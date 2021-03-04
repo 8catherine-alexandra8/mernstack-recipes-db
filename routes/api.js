@@ -1,4 +1,5 @@
 const express = require('express')
+const asyncHandler = require('express-async-handler')
 const router = express.Router()
 const DBRecipe = require('../models/recipeModel')
 
@@ -38,5 +39,31 @@ router.post('/save', (req, res) => {
 		.then(() => res.json('Recipe added'))
 		.catch((err) => res.status(400).json(err))
 })
+
+router.patch(
+	'/edit/:id',
+	asyncHandler(async (req, res) => {
+		const recipe = await DBRecipe.findByIdAndUpdate(
+			req.params.id,
+			req.body,
+			{ new: true, runValidators: true, context: 'query' }
+		)
+		if (recipe) {
+			;(recipe.name = req.body.name),
+				(recipe.prepTime = req.body.prepTime),
+				(recipe.cookTime = req.body.cookTime),
+				(recipe.servings = req.body.servings),
+				(recipe.instructions = req.body.instructions),
+				(recipe.ingredients = req.body.ingredients),
+				(recipe.author = req.body.author)
+
+			const editedRecipe = await recipe.save()
+			res.json(editedRecipe)
+		} else {
+			res.status(404)
+			throw new Error('Post not found')
+		}
+	})
+)
 
 module.exports = router
